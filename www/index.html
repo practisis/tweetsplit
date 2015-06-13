@@ -7,16 +7,37 @@
     <title>TweetSplit 1.0</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="cordova.js"></script>
-    </head>
+	</head>
     <body>      
 <div class="container">
-  <br/><br/><br/>
-<div class="row">
-<div class="col-md-12">HOLA!!</div>	
+<br/>
+<br/>
+<br/>
+<div class="row" style="text-align:center;">
+  <div class="col-md-12" style="font-size:48px;">TweetSplit</div>
 </div>
-<br/><br/><br/>
+<br/>
+<div class="row" style="text-align:center;">
+  <div class="col-md-12" onclick="aplasta()"><img src="images/logotwitter.png" /></div>
+</div>
  </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script>
+	
+	function aplasta(){
+	
+	$.ajax({
+  method: "POST",
+  url: "http://www.practisis.net/nada.php",
+  data: { name: "John", location: "Boston" }
+})
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
+  
+	}
+	
+	</script>
   </body>
 </html>
