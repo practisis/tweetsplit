@@ -18,25 +18,35 @@
 </div>
 <br/>
 <div class="row" style="text-align:center;">
-  <div class="col-md-12" onclick="aplasta()"><img src="images/logotwitter.png" /></div>
+  <div class="col-md-12" onclick="getTweets()"><img src="images/logotwitter.png" /></div>
+  <div onclick="listo();">HOLA</div>
 </div>
  </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script>
 	
+	function listo(){
+	  var type = "text/html";
+var title = "test.html";
+var fileContent = "<html>Phonegap Print Plugin</html>";
+window.plugins.PrintPlugin.print(fileContent,function(){alert('success')},function(){alert('fail')},"",type,title);
+	  
+	}
+	
 	function aplasta(){
 	
 	$.ajax({
   method: "POST",
-  url: "http://www.practisis.net/nada.php",
-  data: { name: "John", location: "Boston" }
+  url: "https://www.practisis.net/twitterauto.php"
 })
   .done(function( msg ) {
     alert( "Data Saved: " + msg );
   });
   
 	}
+	
+	
 	
 	</script>
   </body>
